@@ -1,5 +1,7 @@
 package main;
 
+import java.util.Arrays;
+
 public class TemplateBanner {
 
 	private String[] A = {"   ###    ", "  ## ##   ", " ##   ##  ", "##     ## ", "######### ", "##     ## ", "##     ## "};       
@@ -32,7 +34,7 @@ public class TemplateBanner {
 	
 	
 
-	public void asciiArt(String input) {
+	public void asciiArt(String input, String[] alphabet) {
 		
 		String[] allChar = input.split("(?!^)");
 		
@@ -46,116 +48,124 @@ public class TemplateBanner {
 			{
 				String singleChar = allChar[j];
 				
-				switch(singleChar)
+				if(Arrays.asList(alphabet).contains(singleChar))
 				{
-				case "A":
-					lineOut += " " + A[i];
-					break;
-				
-				case "B":
-					lineOut += " " + B[i];
-					break;
+					switch(singleChar)
+					{
+					case "A":
+						lineOut += " " + A[i];
+						break;
 					
-				case "C":
-					lineOut += " " + C[i];
-					break;
-					
-				case "D":
-					lineOut += " " + D[i];
-					break;
-					
-				case "E":
-					lineOut += " " + E[i];
-					break;
-					
-				case "F":
-					lineOut += " " + F[i];
-					break;
-					
-				case "G":
-					lineOut += " " + G[i];
-					break;
-					
-				case "H":
-					lineOut += " " + H[i];
-					break;
-					
-				case "I":
-					lineOut += " " + I[i];
-					break;
-					
-				case "J":
-					lineOut += " " + J[i];
-					break;
-					
-				case "K":
-					lineOut += " " + K[i];
-					break;
-					
-				case "L":
-					lineOut += " " + L[i];
-					break;
-					
-				case "M":
-					lineOut += " " + M[i];
-					break;
-					
-				case "N":
-					lineOut += " " + N[i];
-					break;
-					
-				case "O":
-					lineOut += " " + O[i];
-					break;
-					
-				case "P":
-					lineOut += " " + P[i];
-					break;
-					
-				case "Q":
-					lineOut += " " + Q[i];
-					break;
-					
-				case "R":
-					lineOut += " " + R[i];
-					break;
-					
-				case "S":
-					lineOut += " " + S[i];
-					break;
-					
-				case "T":
-					lineOut += " " + T[i];
-					break;
-					
-				case "U":
-					lineOut += " " + U[i];
-					break;
-					
-				case "V":
-					lineOut += " " + V[i];
-					break;
-					
-				case "W":
-					lineOut += " " + W[i];
-					break;
-					
-				case "X":
-					lineOut += " " + X[i];
-					break;
-					
-				case "Y":
-					lineOut += " " + Y[i];
-					break;
-					
-				case "Z":
-					lineOut += " " + Z[i];
-					break;
-					
-				default:
+					case "B":
+						lineOut += " " + B[i];
+						break;
+						
+					case "C":
+						lineOut += " " + C[i];
+						break;
+						
+					case "D":
+						lineOut += " " + D[i];
+						break;
+						
+					case "E":
+						lineOut += " " + E[i];
+						break;
+						
+					case "F":
+						lineOut += " " + F[i];
+						break;
+						
+					case "G":
+						lineOut += " " + G[i];
+						break;
+						
+					case "H":
+						lineOut += " " + H[i];
+						break;
+						
+					case "I":
+						lineOut += " " + I[i];
+						break;
+						
+					case "J":
+						lineOut += " " + J[i];
+						break;
+						
+					case "K":
+						lineOut += " " + K[i];
+						break;
+						
+					case "L":
+						lineOut += " " + L[i];
+						break;
+						
+					case "M":
+						lineOut += " " + M[i];
+						break;
+						
+					case "N":
+						lineOut += " " + N[i];
+						break;
+						
+					case "O":
+						lineOut += " " + O[i];
+						break;
+						
+					case "P":
+						lineOut += " " + P[i];
+						break;
+						
+					case "Q":
+						lineOut += " " + Q[i];
+						break;
+						
+					case "R":
+						lineOut += " " + R[i];
+						break;
+						
+					case "S":
+						lineOut += " " + S[i];
+						break;
+						
+					case "T":
+						lineOut += " " + T[i];
+						break;
+						
+					case "U":
+						lineOut += " " + U[i];
+						break;
+						
+					case "V":
+						lineOut += " " + V[i];
+						break;
+						
+					case "W":
+						lineOut += " " + W[i];
+						break;
+						
+					case "X":
+						lineOut += " " + X[i];
+						break;
+						
+					case "Y":
+						lineOut += " " + Y[i];
+						break;
+						
+					case "Z":
+						lineOut += " " + Z[i];
+						break;
+						
+					default:
+						lineOut += " " + questionMark[i];
+						break;
+					}
+				}else
+				{
 					lineOut += " " + questionMark[i];
-					break;
 				}
+				
+				
 			}
 			
 			System.out.println(lineOut);
