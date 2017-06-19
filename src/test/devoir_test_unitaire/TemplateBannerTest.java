@@ -23,7 +23,7 @@ public class TemplateBannerTest {
 	public void asciiArtTest() {
 
 		com.github.javafaker.Faker faker = new Faker();
-		String fakeStr = faker.name();
+		String fakeStr = faker.address().cityName();
 		String[] alphabet = {"A", "B", "W", "U", "I", "O", "T", "Z"};
 		Boolean isOk = true;
 			
