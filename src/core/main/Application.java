@@ -22,9 +22,13 @@ public class Application {
 		System.out.println("Veuillez entrez les caractères à transformer : ");
 		String str = sc.nextLine();
 		
+		sc.close();
+		
 		System.out.println("Voici vos caractères transformés : ");
 		
 		System.out.println(template.asciiArt(str.toUpperCase(), splitAlpha));
+		
+		
 		
 		
 
