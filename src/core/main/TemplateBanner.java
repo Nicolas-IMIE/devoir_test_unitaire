@@ -34,15 +34,14 @@ public class TemplateBanner {
 	
 	
 
-	public void asciiArt(String input, String[] alphabet) {
+	public String asciiArt(String input, String[] alphabet) {
 		
 		String[] allChar = input.split("(?!^)");
 		
-		
+		String lineOut = "";
 		
 		for(int i = 0; i < 7; i++)
 		{
-			String lineOut = "";
 			
 			for(int j = 0; j < (allChar.length); j++)
 			{
@@ -165,11 +164,17 @@ public class TemplateBanner {
 					lineOut += " " + questionMark[i];
 				}
 				
-				
+				if(j == allChar.length -1)
+				{
+					lineOut += "\n";
+				}
 			}
 			
-			System.out.println(lineOut);
+			
+//			System.out.println(lineOut);
+			
 		}
+		return lineOut;
 		
 	}
 	

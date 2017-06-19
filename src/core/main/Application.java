@@ -24,7 +24,9 @@ public class Application {
 		
 		System.out.println("Voici vos caractères transformés : ");
 		
-		template.asciiArt(str.toUpperCase(), splitAlpha);
+		System.out.println(template.asciiArt(str.toUpperCase(), splitAlpha));
+		
+		
 
 	}
 
