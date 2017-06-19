@@ -6,7 +6,7 @@ public class Application {
 		
 		TemplateBanner template = new TemplateBanner();
 		
-		template.asciiArt("ABC");
+		template.asciiArt("AZERTYOLU");
 
 	}
 
